@@ -1,39 +1,45 @@
-# AMIGO CHAT
+# AMIGO CHAT MVP v1.1 — REAL MVP SKELETON
 
-AMIGO CHAT est une application de communication et d'intelligence artificielle développée pour offrir une expérience simple, moderne et accessible.
+This is a runnable MVP foundation, not a production app yet.
 
-## Fonctionnalités
+## Included
+- Flutter Android UI
+- Real Flutter -> HTTP -> backend communication
+- Chat endpoint
+- Writing endpoint
+- Translation endpoint
+- Summary endpoint
+- Local chat history
+- Video trial UI: 7 days / 10 seconds rule
+- Provider-neutral AI adapter point
+- No secret API keys in Flutter
 
-- 💬 Chat et conversations
-- 🤖 Assistance par intelligence artificielle
-- 🖼️ Génération d'images IA
-- 🎥 Génération de vidéos IA
-- ⭐ Formules Premium
-- 💳 Paiements et crédits
-- 📱 Application Android
+## Run
+Flutter:
+```bash
+flutter pub get
+flutter run
+```
 
-## Offre vidéo
+Backend:
+```bash
+cd backend
+npm install
+npm run dev
+```
 
-Les nouveaux utilisateurs bénéficient d'une période d'essai gratuite de 7 jours permettant de générer des vidéos de 10 secondes.
+Android Emulator uses `http://10.0.2.2:3000`.
+Physical phone: replace `AiService.baseUrl` with the computer LAN IP.
 
-Les générations de vidéos de plus de 10 secondes nécessitent une offre payante.
+## Important
+The four AI endpoints currently run in DEMO mode. They are real HTTP endpoints and can be tested end-to-end, but they do not call a commercial AI model yet. A real provider must be configured on the backend before production.
 
-## Projet
-
-Nom du projet : AMIGO CHAT
-
-Version : MVP / développement
-
-Plateforme principale : Android
-
-## Objectif
-
-Développer une application complète permettant aux utilisateurs de communiquer, utiliser des fonctionnalités d'intelligence artificielle et accéder à des services Premium.
-
-## Statut
-
-🚧 Projet en cours de développement et de test.
-
-## Développeur
-
-AMIGO CHAT
+Next production blocks:
+1. Real AI provider
+2. User authentication
+3. Server-side 7-day trial and quotas
+4. Image generation
+5. Video generation
+6. Manual payment flow, then official MTN/Celtiis integrations
+7. International payments
+8. Security, monitoring and production deployment
